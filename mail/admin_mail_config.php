@@ -11,15 +11,15 @@ require './mail/PHPMailer/src/SMTP.php';
 $mail = new PHPMailer();
 
 $mail->IsSMTP();
-$mail->Host = 'mail.dragsdev.com.ng';
+$mail->Host = 'mail.mnvc.com.ng';
 $mail->Port = 465;//587;
 $mail->SMTPSecure = "ssl";//'tls';
 
 $mail->SMTPAuth = true;
-$mail->Username = 'nwutobo@dragsdev.com.ng'; //your username
+$mail->Username = 'dragon@mnvc.com.ng'; //your username
 $mail->Password = 'Mnvc.com'; //your password
 
-$mail->setFrom("nwutobo@dragsdev.com.ng", "Victor Charles Nwutobo"); //Sender email address & name
+$mail->setFrom("dragon@mnvc.com.ng", "Victor Charles dragon"); //Sender email address & name
 
 if ($receiver["customer"] == "notsent"){
   $mail->addAddress("$customerEmail", "$customerName"); //Recipient email address
@@ -40,7 +40,7 @@ if ($receiver["customer"] == "notsent"){
 }
 
 if ($receiver["admin"] == "notsent"){
-  $mail->addAddress("nwutobo@dragsdev.com.ng", "Victor Charles Nwutobo"); //Recipient email address
+  $mail->addAddress("dragon@mnvc.com.ng", "Victor Charles dragon"); //Recipient email address
 
   ////////////////////////// FIND EMAIL BODY AND SUBJECT ON PAGES
   $mail->Subject = $subject;

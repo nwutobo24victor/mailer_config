@@ -9,13 +9,13 @@ require './mail/PHPMailer/src/SMTP.php';
 $mail = new PHPMailer();
 
 $mail->IsSMTP();
-$mail->Host = 'mail.dragsdev.com.ng';
+$mail->Host = 'mail.mnvc.com.ng';
 $mail->Port = 465;
 $mail->SMTPSecure = "ssl";
 $mail->SMTPAuth = true;
-$mail->Username = 'nwutobo@dragsdev.com.ng'; //your username
+$mail->Username = 'dragon@mnvc.com.ng'; //your username
 $mail->Password = 'Mnvc.com'; //your password
-$mail->setFrom("nwutobo@dragsdev.com.ng", "Victor Charles Nwutobo");
+$mail->setFrom("dragon@mnvc.com.ng", "Victor Charles dragon");
 
 $mail->isHTML(true); // Set once
 
@@ -46,7 +46,7 @@ if ($receiver["customer"] == "notsent") {
 
 // Send to admin
 if ($receiver["admin"] == "notsent") {
-    $mail->addAddress("nwutobo@dragsdev.com.ng", "Victor Charles Nwutobo");
+    $mail->addAddress("dragon@mnvc.com.ng", "Victor Charles dragon");
     $mail->Subject = $subject;
     $mail->Body = $emailBodyAdm;
 

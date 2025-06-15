@@ -16,11 +16,6 @@ header('Content-Type: application/json');
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-// $data['name'] = "Victor Charles Nwutobo";
-//
-// $data['email'] = "nwutobo24victor.charles@gmail.com";
-//
-// $data['message'] = "I love what you are doing";
 
 // Example logic
 if (empty($data['name'])) {
